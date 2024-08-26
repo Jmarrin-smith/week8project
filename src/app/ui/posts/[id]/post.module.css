@@ -1,0 +1,30 @@
+.PostImage {
+  width: 100%;
+}
+
+.buffer {
+  height: 20px;
+}
+
+.CommentBox {
+  width: 100%;
+  border-top: 2px;
+  border-top-style: solid;
+  border-color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.CommenterName {
+  width: 90%;
+  margin: auto;
+}
+
+.CommentContent {
+  width: 80%;
+  margin: auto;
+  border-bottom: 2px;
+  border-bottom-style: solid;
+  border-color: rgb(0, 0, 0);
+}

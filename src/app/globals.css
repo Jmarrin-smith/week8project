@@ -1,33 +1,80 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --bg: rgb(255, 255, 255);
+  --tectcolour: black;
+  --bgsoft: rgb(222, 222, 222);
+  --tectcoloursoft: rgb(40, 40, 40);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  min-height: 100vh;
+  background-color: var(--bg);
+  color: var(--tectcolour);
+}
+
+.wrappercontent {
+  max-width: 1536px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+@media screen and (max-width: 1536px) {
+  .wrappercontent {
+    max-width: 1366px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .wrappercontent {
+    max-width: 1024px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .wrappercontent {
+    max-width: 800px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .wrappercontent {
+    max-width: 700;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .wrappercontent {
+    max-width: 420px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .wrappercontent {
+    max-width: 350px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
