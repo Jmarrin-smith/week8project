@@ -17,9 +17,11 @@ export default function Navbar() {
           <Link href="/ui/posts">
             <h3>posts</h3>
           </Link>
-
           <Link href="/ui/about">
             <h3>about</h3>
+          </Link>
+          <Link href="/ui/newpost">
+            <h3>New Post</h3>
           </Link>
         </div>
       </div>
