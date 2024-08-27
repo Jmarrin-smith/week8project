@@ -22,7 +22,7 @@ export default async function Newpostpage(params) {
 
   return (
     <div>
-      <h2>Add Candle</h2>
+      <h2>sign in</h2>
       <form action={handleaddpost}>
         <input name="username" placeholder="username" />
         <input type="password" name="password" placeholder="password" />

@@ -11,26 +11,27 @@ export default async function Newpostpage(params) {
     const username = formData.get("username");
     const title = formData.get("title");
     const content = formData.get("content");
+    const img = formData.get("img");
 
     await db.query(
-      `INSERT INTO candles (username, title, content) VALUES ($1, $2, $3)`,
-      [username, title, content]
+      `INSERT INTO posts (username, title, content,) VALUES ($1, $2, $3, $4)`,
+      [username, title, content, img]
     );
 
-    // revalidate that page to ensure ALL the new candles are shown
     revalidatePath("./posts");
-    // redirect tot he page that shows the list of candles
     redirect("./posts");
   }
 
   return (
     <div>
-      <h2>Add Candle</h2>
+      <h2>Add post</h2>
       <form action={handleaddpost}>
         <input name="username" placeholder="username" />
         <input name="title" placeholder="title" />
         <input name="content" placeholder="content" />
         <button>Submit</button>
+
+        <input name="img" placeholder="image url" />
       </form>
     </div>
   );

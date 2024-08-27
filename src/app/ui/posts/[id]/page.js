@@ -19,7 +19,7 @@ export default async function PostPage({ params }) {
     const content = formData.get("content");
 
     await db.query(
-      `INSERT INTO candles (username, content,postid) VALUES ($1, $2, $3)`,
+      `INSERT INTO comments (username, content,postid) VALUES ($1, $2, $3)`,
       [username, content, params]
     );
   }
