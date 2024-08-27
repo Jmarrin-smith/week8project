@@ -45,8 +45,10 @@ export default async function PostPage({ params }) {
         </>
       ))}
       <div className={styles.buffer}></div>
+      <button action={deletepost}>delete</button>
+      <div className={styles.buffer}></div>
       <div>
-        <h2>Add Candle</h2>
+        <h2>Add Comment</h2>
         <form action={handleaddcomment}>
           <input name="username" placeholder="username" />
           <input name="content" placeholder="content" />
