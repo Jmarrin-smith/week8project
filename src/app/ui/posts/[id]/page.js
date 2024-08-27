@@ -1,5 +1,5 @@
 import styles from "./post.module.css";
-import { db } from "@/app/lib/DB";
+import { db } from "@/lib/DB";
 
 export default async function PostPage({ params }) {
   const result = await db.query(`SELECT * FROM posts where id =(1$)`, [params]);

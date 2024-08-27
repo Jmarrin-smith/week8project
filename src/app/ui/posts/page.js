@@ -1,5 +1,5 @@
 import styles from "./posts.module.css";
-import { db } from "@/app/lib/DB";
+import { db } from "@/lib/DB";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
